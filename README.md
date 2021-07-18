@@ -38,7 +38,7 @@ python scott.py
 
 7.
 
-[![src/scott.gif]]
+![Scott 'The Moose' Moe](src/scott.gif)
 
 ## Why?
 
