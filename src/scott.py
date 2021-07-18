@@ -1,6 +1,7 @@
-from discord import Client, File, Embed, Colour
+from discord import Client, File
 from dotenv import load_dotenv
 from os import getenv
+
 
 def scottify(message: str) -> str:
     scotty = ""
@@ -27,6 +28,9 @@ async def on_message(message):
 
         await message.channel.send(file=gif)
 
+
+# Load from any .env files
 load_dotenv()
 
+# Run the bot, where the bot token is probably stored in a .env file
 client.run(getenv('TOKEN'))
