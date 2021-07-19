@@ -23,8 +23,17 @@ async def on_message(message):
     print(converted)
 
     if "scott" in converted and "moe" in converted:
-        with open("scott.gif", "rb") as f:
-            gif = File(f)
+
+        scott = converted.index("scott")
+        moe = converted.index("moe")
+
+        if scott < moe:
+            with open("scott.gif", "rb") as f:
+                gif = File(f)
+
+        else:
+            with open("ttocs.gif", "rb") as f:
+                gif = File(f)
 
         await message.channel.send(file=gif)
 
