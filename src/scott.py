@@ -37,6 +37,12 @@ async def on_message(message):
 
         await message.channel.send(file=gif)
 
+    elif client.user.mentioned_in(message):
+        with open("scott.gif", "rb") as f:
+            gif = File(f)
+
+        await message.channel.send(file=gif)
+
 
 # Load from any .env files
 load_dotenv()
