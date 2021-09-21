@@ -43,6 +43,13 @@ async def on_message(message):
 
         await message.channel.send(file=gif)
 
+    elif "maxime" in converted and "bernier" in converted:
+
+        with open("egg.jpg", "rb") as f:
+            egg = File(f)
+
+        await message.channel.send(file=egg)
+
 
 # Load from any .env files
 load_dotenv()
